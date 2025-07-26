@@ -1,16 +1,11 @@
 include:
-  # Totem (seeeduino_xiao_ble)
   - board: seeeduino_xiao_ble
     shield: totem_left
   - board: seeeduino_xiao_ble
     shield: totem_right
   - board: seeeduino_xiao_ble
     shield: totem_dongle prospector_adapter
-
-  # KLOR (seeeduino_xiao_ble, same build setup as Totem)
-  - board: nice_nano_v2
-    shield: klor_left
-  - board: nice_nano_v2
-    shield: klor_right
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: seeeduino_xiao_ble
-    shield: klor_dongle prospector_adapter
+    shield: settings_reset
